@@ -12,7 +12,7 @@
             <form action="/editUser/<%=body.id%> " method="post" class="formUser">
                 <h1>Edit user</h1>
                 <input type="text" name="name" placeholder="Nome" id="" value="<%= body.name %>">
-                <input type="number" name="age" placeholder="Idade" id="" value="<%= body.age %> ">
+                <input type="number" name="age" placeholder="Idade" id="" value= <%= body.age %> >
                 <input type="email" name="email" placeholder="E-mail" id="" value="<%= body.email %> ">
                 <input type="submit" value="Edit">
             </form>
