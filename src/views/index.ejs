@@ -1,0 +1,29 @@
+<%- include('./partials/head'); %>
+<body>
+    <header>
+        <h1>All Users</h1>
+        <a id="btn-createUser" href="/createNewUser"><small>Create new user</small></a>
+    </header>
+    <main >
+        <% for( let i=0; i < body.length; i++ ) { %>
+            <div class="boxUser" id="<%= body[i]._id %> ">  
+                <div class="infoUser">
+                    <h4>Nome: <%= body[i].name %>
+                    </h4>
+                    <h4>Idade: <%= body[i].age %>
+                    </h4>
+                    <h4>Email: <%= body[i].email %> </h4>
+                </div>
+               
+
+                <div class="btns">
+                    <button id="btn-deleteUser" onclick="deleteUser('<%= body[i]._id %>')"><img src="./assets/delete.png" alt="logoEdit" style="margin: auto;"></button>
+                    <a id="btn-editUser" href="/editUser/<%= body[i]._id %> "><img src="./assets/edit.png"></a>
+                </div>
+                
+            </div>
+            <% } %>
+    </main>
+</body>
+    <script defer src="./js/script.js"></script>
+</html>
